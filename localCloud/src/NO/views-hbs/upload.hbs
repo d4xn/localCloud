@@ -1,0 +1,33 @@
+<template>
+  <div class="upload">
+    <template>
+        <div class="uploadForm">
+
+            <br />
+
+            <h1 id="uploadTitle" > LocalCloud | Upload </h1>
+
+            <br />
+
+            <img id="uploadLogo" alt="upload Logo" src="/public/img/upload.png">
+
+            <!--<h1 id="uploadTitle" > LocalCloud | Upload </h1>-->
+
+            <br />
+
+            <div class="alert alert-dismissible alert-success">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            Select a file to upload! You can see all files uploaded <a href="/files" class="alert-link">here</a>
+            </div>
+
+            <br />
+
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+            <input type="file" name="myFile" />
+            <input type="submit" />
+            </form>
+
+        </div>
+    </template>
+  </div>
+</template>

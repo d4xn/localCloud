@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="icon" href="/img/favicon.ico">
+
+    <link href="https://bootswatch.com/5/darkly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://bootswatch.com/5/darkly/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" crossorigin="anonymous">
+
+    <title>LocalCloud</title>
+  </head>
+  <body>
+
+        <div class="upload">
+              <div class="uploadForm">
+      
+                  <br />
+      
+                  <h1 id="uploadTitle" > LocalCloud | Upload </h1>
+      
+                  <br />
+      
+                  <img id="uploadLogo" alt="upload Logo" src="/img/upload.png">
+      
+                  <br />
+      
+                  <div class="alert alert-dismissible alert-success">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert"> </button>
+                  Select a file to upload! You can see all files uploaded <a href="/files" class="alert-link">here</a>
+                  </div>
+      
+                  <br />
+      
+                  <form method="POST" action="/upload" enctype="multipart/form-data">
+                  <input type="file" name="myFile" />
+                  <input type="submit" />
+                  </form>
+      
+              </div>
+        </div>
+
+  </body>
+</html>

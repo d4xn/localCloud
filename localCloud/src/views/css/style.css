@@ -1,0 +1,57 @@
+#nav {
+  padding: 30px;
+}
+
+a {
+  font-weight: bold;
+  color: whitesmoke;
+  color: #42b983;
+}
+
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+  #uploadLogo {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 20%;
+  }
+  
+  .container {
+    width: 375px;
+    clear: both;
+  }
+  
+  .container input {
+    width: 100%;
+    clear: both;
+  }
+  
+  #loginLogo {
+      margin-top: 2%;
+      margin-bottom: 2%;
+  }
+  
+  #adminLogo {
+      margin: 0%;
+      width: 225px;
+  }
+  
+  .container {
+    width: 375px;
+    clear: both;
+  }
+  
+  .container input {
+    width: 100%;
+    clear: both;
+  }
