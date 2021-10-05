@@ -1,5 +1,5 @@
 {
-  "name": "localCloud",
+  "name": "localcloud",
   "version": "0.1.0",
   "description": "",
   "main": "src/app.js",
@@ -15,7 +15,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
-    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
     "morgan": "^1.10.0",
     "path": "^0.12.7",
     "serve-handler": "^6.1.3"

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="/img/favicon.ico">
 
-    <link href="/css/style.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" crossorigin="anonymous">
     <link href="https://bootswatch.com/5/darkly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://bootswatch.com/5/darkly/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
 
@@ -14,12 +15,39 @@
   </head>
   <body>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">LocalCloud</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/files"">Files</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
         <div class="error404">
+
           <br />
               <div class="error404Message">
       
                   <br />
-                  <h1 class="text-danger">404 ERROR NOT FOUND</h1>
+                  <h1 class="text-danger error404">404 ERROR NOT FOUND</h1>
       
               </div>
         </div>
