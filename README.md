@@ -1,7 +1,7 @@
 # localCloud
 **Simple File Upload Home Cloud App**
 
-![Alt Text](https://github.com/d4xn/localCloud/blob/master/src/public/img/upload.png)
+![Alt Text](https://github.com/d4xn/localCloud/blob/master/localCloud/src/public/img/upload.png)
 # Setup
 ```sh
 git clone https://github.com/d4xn/localCloud.git
@@ -28,6 +28,6 @@ npm start / yarn start
 npm run dev / yarn dev
 ```
 
-![Alt Text](https://github.com/d4xn/localCloud/blob/master/src/public/img/localcloud.png)
+![Alt Text](https://github.com/d4xn/localCloud/blob/master/localCloud/src/public/img/localcloud.png)
 
 # Thanks For Reading! 
