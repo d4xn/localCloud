@@ -5,8 +5,9 @@ const express = require('express');
     dotenv = require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
     function isNotAdmin(req, res, next) {
-        if (!req.session.admin) next();
-        else res.redirect('/');
+        if (req.session.token === process.env.ADMIN_TOKEN && 
+            req.session.user == process.env.ADMIN_USERNAME) res.redirect('/');
+        else next();
     }
 
     router.get('/login', isNotAdmin, (req, res) => {
@@ -18,10 +19,11 @@ const express = require('express');
             const username = req.body.username;
             const password = req.body.password;
 
-            if ((username === process.env.ADMIN_USERNAME || username === 'admin') && 
-            (password === process.env.ADMIN_PASSWORD || password === 'admin')) {
+            if (username === process.env.ADMIN_USERNAME && 
+            password === process.env.ADMIN_PASSWORD) {
                 console.log('logged in!')
-                req.session.admin = process.env.ADMIN_COOKIE || 'admin';
+                req.session.user = process.env.ADMIN_USERNAME;
+                req.session.token = process.env.ADMIN_TOKEN;
                 return res.redirect('/');
             }
         }
@@ -30,13 +32,7 @@ const express = require('express');
     });
 
     router.get('/logout', (req, res) => {
-        req.session.destroy(function(err) {
-            if (err) {
-                console.log(err);
-                return res.send(err);
-            }
-        });
-
+        req.session.destroy();
         res.redirect('/login');
     });
 

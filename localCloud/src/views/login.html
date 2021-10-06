@@ -15,6 +15,7 @@
   </head>
   <body>
 
+    <!--
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">LocalCloud</a>
@@ -40,22 +41,25 @@
           </div>
         </div>
       </nav>
+    -->
+
+        <br />
 
         <div class="login">
               <div class="loginForm">
       
-                  <img id="loginLogo" alt="Login logo" src="img/login.png">
+                  <img id="loginLogo" alt="Login logo" src="/img/login.png">
       
                   <div class="container">
                       <form method="POST" action="/login">
                           <div class="form-group">
                               <label for="usernameInput" class="form-label mt-4">Username</label>
-                              <input type="text" name="username" class="form-control" id="usernameInput" aria-describedby="usernameHelp" placeholder="Username" maxlength="25">
+                              <input type="text" name="username" class="form-control" id="usernameInput" aria-describedby="usernameHelp" placeholder="Username" maxlength="25" required>
                           </div>
       
                           <div class="form-group">
                               <label for="passwordInput" class="form-label mt-4">Password</label>
-                              <input type="password" name="password" class="form-control" id="passwordInput" placeholder="Password" maxlength="75">
+                              <input type="password" name="password" class="form-control" id="passwordInput" placeholder="Password" maxlength="75" required>
                           </div>
       
                           <br />

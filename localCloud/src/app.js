@@ -1,10 +1,10 @@
 const express = require("express");
     fileUpload = require("express-fileupload");
     cors = require("cors");
-    morgan = require("morgan");;
+    morgan = require("morgan");
     path = require("path");
     handler = require('serve-handler');
-    dotenv = require('dotenv').config({ path: path.join(__dirname, './env') });
+    dotenv = require('dotenv').config();
     session = require("express-session");
     loginRoutes = require('./routes/login');
     uploadRoutes = require('./routes/upload');
@@ -14,23 +14,12 @@ const app = express();
 const port = process.env.PORT || 8081;
 
 app.use(cors());
-
-app.options('*',cors());
-var allowCrossDomain = function(req,res,next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-}
-app.use(allowCrossDomain);
-
 app.use(morgan('dev'));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const sess = {
-    secret: process.env.SESSION_SECRET || "secret",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -45,13 +34,6 @@ const sess = {
 
 app.use(session(sess));
 
-function isAdmin(req, res, next) {
-    if (req.session.admin) next();
-    else res.redirect('/login');
-}
-
-//app.use(isAdmin);
-
 app.use(fileUpload({
     createParentPath: true,
     useTempFiles : true,
@@ -60,8 +42,19 @@ app.use(fileUpload({
     abortOnLimit: true
   }));
 
-app.use('/files', express.static(path.join(__dirname, '/../files')));
+function isAdmin(req, res, next) {
+    if (req.session.token === process.env.ADMIN_TOKEN && 
+        req.session.user == process.env.ADMIN_USERNAME) next();
+    else res.redirect('/login');
+}
+
+app.get('/files/*', isAdmin, (req, res, next) => {
+    next();
+})
+
+app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/', express.static(path.join(__dirname, '/views')));
+app.use('/files', express.static(path.join(__dirname, '/../files')));
 
 app.use(loginRoutes);
 app.use(uploadRoutes);
