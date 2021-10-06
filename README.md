@@ -28,5 +28,3 @@ npm run dev / yarn dev
 ```
 
 # Thanks For Reading! 
-
-![Alt Text](https://github.com/d4xn/localCloud/blob/master/localCloud/src/public/img/upload.png)
