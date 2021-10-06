@@ -5,11 +5,11 @@
 ```sh
 git clone https://github.com/d4xn/localCloud.git
 
-cd localCloud/localcloud
+cd localCloud/localCloud/
 
 npm i / yarn upgrade
 
-create a file named .env at /src/
+create a file named .env at src/
 
 ▼ content of .env ▼
 PORT = 8081
@@ -27,4 +27,4 @@ npm start / yarn start
 npm run dev / yarn dev
 ```
 
-# Thanks For Reading! 
+# Thanks For Reading!
