@@ -65,5 +65,5 @@ app.get('/*', isAdmin, (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`App listening at http://192.168.0.49:${port}`);
+    console.log(`App listening at http://localhost:${port}`);
 });
