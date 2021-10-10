@@ -28,12 +28,12 @@ npm run dev / yarn dev
 ```
 # Images
 
-![Alt Text](https://github.com/d4xn/localCloud/blob/master/assets/login.png)
+![Login](https://github.com/d4xn/localCloud/blob/master/assets/login.png)
 
-![Alt Text](https://github.com/d4xn/localCloud/blob/master/assets/upload.png)
+![Upload](https://github.com/d4xn/localCloud/blob/master/assets/upload.png)
 
-![Alt Text](https://github.com/d4xn/localCloud/blob/master/assets/files.png)
+![Files](https://github.com/d4xn/localCloud/blob/master/assets/files.png)
 
-![Alt Text](https://github.com/d4xn/localCloud/blob/master/assets/test.txt.png)
+![Test File](https://github.com/d4xn/localCloud/blob/master/assets/test.txt.png)
 
 # Thanks For Reading!
