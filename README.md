@@ -26,5 +26,14 @@ npm start / yarn start
 ▼ Development ▼
 npm run dev / yarn dev
 ```
+# Images
+
+![Alt Text](https://github.com/d4xn/localCloud/blob/master/assets/login.png)
+
+![Alt Text](https://github.com/d4xn/localCloud/blob/master/assets/upload.png)
+
+![Alt Text](https://github.com/d4xn/localCloud/blob/master/assets/files.png)
+
+![Alt Text](https://github.com/d4xn/localCloud/blob/master/assets/test.txt.png)
 
 # Thanks For Reading!
